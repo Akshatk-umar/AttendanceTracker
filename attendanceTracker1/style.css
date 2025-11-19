@@ -1,0 +1,270 @@
+
+.auth-card {
+  width: 300px;
+  margin: 80px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.auth-card input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-card a {
+  color: #2196F3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.actions {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.actions .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  width: 100%;
+}
+
+.actions .checkin {
+  background: #4CAF50;
+  color: white;
+}
+
+.actions .checkout {
+  background: #f44336;
+  color: white;
+}
+
+.actions .break {
+  background: #ebde2f;
+  color: white;
+}
+
+.actions .back {
+  background: #f8870f;
+  color: white;
+}
+
+.actions button:hover {
+  opacity: 0.85;
+}
+
+.apply-leave-btn {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 350px;
+  transition: background-color 0.2s ease;
+}
+
+.apply-leave-btn:hover {
+  background-color: #1976D2;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.submit-btn {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1976D2;
+}
+
+.cancel-btn {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #bdbdbd;
+}
+
+.close-btn:hover {
+ cursor: pointer;
+  background-color: #bdbdbd;
+}
+
+.picker-section {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.picker-section label,
+.picker-section input {
+  margin: 0;
+}
+
+#leaveHistoryTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#leaveHistoryTable th,
+#leaveHistoryTable td {
+  border: 2px solid #000;
+  padding: 8px;
+  text-align: center;
+}
+
+#leaveHistoryTable th {
+  background: #2196f3;
+  color: white;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.summary-text {
+  font-size: 18px;
+  font-weight: 500;
+  flex: 1 1 250px;
+}
+
+#chartContainer {
+  width: 180px;
+  height: 180px;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+#attendanceChart {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal.active {
+  display: flex !important;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content {
+  background: linear-gradient(145deg, #ffffff, #f2f2f2);
+  padding: 30px;
+  border-radius: 15px;
+  width: 420px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  animation: popIn 0.3s ease-in-out;
+}
+
+.modal-content h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1976d2;
+  border-bottom: 2px solid #2196f3;
+  padding-bottom: 10px;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus,
+.modal-content select:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 3px rgba(33,150,243,0.3);
+}
